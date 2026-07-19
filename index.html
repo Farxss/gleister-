@@ -1,29 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gleister</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #0f172a;
-            color: #ff4b2b;
-            font-family: sans-serif;
-            font-size: 3rem;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <main class="calculator" role="application" aria-label="Simple calculator">
+    <input class="display" type="text" value="0" readonly aria-live="polite" />
+    <div class="keys">
+      <button class="btn control" data-action="clear">C</button>
+      <button class="btn control" data-action="back">⌫</button>
+      <button class="btn control" data-action="plusminus">±</button>
+      <button class="btn operator" data-action="/">÷</button>
 
-    <div>Gleister es awebao e indio</div>
+      <button class="btn" data-digit="7">7</button>
+      <button class="btn" data-digit="8">8</button>
+      <button class="btn" data-digit="9">9</button>
+      <button class="btn operator" data-action="*">×</button>
 
+      <button class="btn" data-digit="4">4</button>
+      <button class="btn" data-digit="5">5</button>
+      <button class="btn" data-digit="6">6</button>
+      <button class="btn operator" data-action="-">−</button>
+
+      <button class="btn" data-digit="1">1</button>
+      <button class="btn" data-digit="2">2</button>
+      <button class="btn" data-digit="3">3</button>
+      <button class="btn operator" data-action="+">+</button>
+
+      <button class="btn wide" data-digit="0">0</button>
+      <button class="btn" data-action=".">.</button>
+      <button class="btn equals" data-action="=">=</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

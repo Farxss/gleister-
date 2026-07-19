@@ -1,0 +1,95 @@
+:root{
+  --bg:#f4f7fb;
+  --panel:#ffffff;
+  --accent:#4a90e2;
+  --key:#e6eef9;
+  --dark:#222;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg),#eef3fb);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.calculator{
+  width:320px;
+  max-width:95vw;
+  background:var(--panel);
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(40,50,80,0.12);
+  padding:16px;
+}
+
+.display{
+  width:100%;
+  height:64px;
+  font-size:28px;
+  border-radius:8px;
+  border:1px solid #e6eef9;
+  padding:12px;
+  text-align:right;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  color:var(--dark);
+  margin-bottom:12px;
+  outline:none;
+  caret-color:transparent;
+}
+
+.keys{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.btn{
+  height:54px;
+  border-radius:8px;
+  border:none;
+  background:var(--key);
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,0.04);
+  transition:transform .06s ease, box-shadow .06s ease;
+  color:var(--dark);
+}
+
+.btn:active{transform:translateY(1px); box-shadow:none}
+
+.btn.operator{
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+}
+
+.btn.equals{
+  background:#16a34a;
+  color:white;
+  grid-column:4;
+  height:54px;
+  font-weight:700;
+}
+
+.btn.wide{
+  grid-column:1 / span 2;
+  text-align:left;
+  padding-left:18px;
+}
+
+.btn.control{
+  background:#f1f5f9;
+  color:var(--muted);
+  font-weight:600;
+}
+
+@media (max-width:360px){
+  .display{font-size:22px;height:56px}
+  .btn{height:48px;font-size:18px}
+}
