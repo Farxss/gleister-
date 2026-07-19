@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora — Gleister</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" role="application" aria-label="Calculadora">
+    <header class="app-header">
+      <h1 class="title">Calculadora</h1>
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+    </header>
+
+    <section class="calculator" aria-hidden="false">
+      <div class="screen" role="status" aria-live="polite">
+        <div class="previous" aria-hidden="true"></div>
+        <input class="display" type="text" value="0" readonly />
+      </div>
+
+      <div class="pad">
+        <button class="btn ctrl" data-action="clear">C</button>
+        <button class="btn ctrl" data-action="back">⌫</button>
+        <button class="btn ctrl" data-action="plusminus">±</button>
+        <button class="btn op" data-action="/">÷</button>
+
+        <button class="btn num" data-digit="7">7</button>
+        <button class="btn num" data-digit="8">8</button>
+        <button class="btn num" data-digit="9">9</button>
+        <button class="btn op" data-action="*">×</button>
+
+        <button class="btn num" data-digit="4">4</button>
+        <button class="btn num" data-digit="5">5</button>
+        <button class="btn num" data-digit="6">6</button>
+        <button class="btn op" data-action="-">−</button>
+
+        <button class="btn num" data-digit="1">1</button>
+        <button class="btn num" data-digit="2">2</button>
+        <button class="btn num" data-digit="3">3</button>
+        <button class="btn op" data-action="+">+</button>
+
+        <button class="btn zero num" data-digit="0">0</button>
+        <button class="btn num" data-action=".">.</button>
+        <button class="btn equal" data-action="=">=</button>
+      </div>
+
+      <footer class="footnote">Diseño mejorado • Soporte de teclado • Tema claro/oscuro</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
